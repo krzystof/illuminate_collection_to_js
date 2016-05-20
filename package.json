@@ -1,0 +1,18 @@
+{
+  "name": "collection_js",
+  "version": "1.0.0",
+  "description": "A wrapper around lodash to use Illuminate Collections API",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "rollup -c rollup.config.test.js",
+    "test": "npm run pretest && mocha build/test-bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "rollup": "^0.26.3",
+    "rollup-plugin-buble": "^0.8.0"
+  }
+}
