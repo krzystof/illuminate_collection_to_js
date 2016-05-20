@@ -10,17 +10,16 @@ describe('instantiate a collection with collect', function() {
   it('collects an array to a collection', function() {
     collect([1, 2]).should.be.an.instanceof(Collection)
   })
+  // TODO it collects hashes as well
 })
 
-describe('a collection behaves like an array', function() {
-  // it('has a length', function() {
-  //   collect([1, 2]).length.should.equal(2)
-
-  // })
-  it('can access items', function() {
-    let aCollection = collect(['one', 'two'])
-    aCollection[1].should.equal('two')
+describe('a collection has illuminates API', function() {
+  it('implements all', function() {
+    collect().all().should.be.an('array')
+    collect(['stuff']).all().length.should.equal(1)
+  })
+  it('implements count', function() {
+    collect().count().should.equal(0)
+    collect([1, 2]).count().should.equal(2)
   })
 })
-// it has array access
-// it has a length

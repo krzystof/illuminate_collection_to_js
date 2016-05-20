@@ -2,8 +2,14 @@ export function collect(items = []) {
   return new Collection(items)
 }
 
-export class Collection extends Array {
+export class Collection {
   constructor(items = []) {
-    super(items)
+    this.items = items
+  }
+  all() {
+    return this.items
+  }
+  count() {
+    return this.items.length
   }
 }
